@@ -59,3 +59,85 @@ label {
 .registerButton:hover {
   background-color: #45a049;
 }
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.datos {
+  width: 40%;
+}
+
+.inputRow {
+  margin-bottom: 15px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.registerButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: #45a049;
+}
+
+.tabla {
+  width: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.registerButton,
+  table button.editar {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+
+  .registerButton:hover,
+  table button.editar:hover {
+    background-color: #45a049;
+  }
+
+  table button.eliminar {
+    background-color: #e53935;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  table button.eliminar:hover {
+    background-color: #d32f2f;
+  }

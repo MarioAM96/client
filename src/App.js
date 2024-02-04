@@ -76,7 +76,7 @@ function App() {
     Axios.get("http://localhost:3001/empleados")
       .then((response) => {
         setEmpleados(response.data);
-        getEmpleados();
+        //getEmpleados();
       })
       .catch((error) => {
         // Handle network or other errors

@@ -51,6 +51,7 @@ function App() {
             title: 'Empleado registrado',
             text: response.data.message
           });
+          getEmpleados();
         } else {
           // Error alert with the response message
           Swal.fire({
@@ -106,7 +107,34 @@ function App() {
   };
 
   const handleEliminar = (empleadoId) => {
-    // Implement logic for deleting employee with the given id
+    Axios.delete(`http://localhost:3001/empleados/${empleadoId}`)
+      .then((response) => {
+        console.log(response);
+        if (response.data.status) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Empleado eliminado',
+            text: response.data.message
+          });
+          getEmpleados();
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: response.data.message
+          });
+        }
+
+      })
+      .catch((error) => {
+        // Handle network or other errors
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un problema al procesar la solicitud'
+        });
+      });
     console.log(`Eliminar empleado con ID: ${empleadoId}`);
   };
 
